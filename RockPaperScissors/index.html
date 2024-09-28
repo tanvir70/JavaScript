@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Game of R-P-S</h1>
-    <div class="choices"></div>
-        <div class="choice" id="rocK"></div>
+    
+    <h1>Game of Rock Paper Scissors</h1>
+    
+    <div class="choices">
+        <div class="choice" id="rocK">
+            <img src="./images/rock.png" alt="Roak hand gesture">
+        </div>
+        <div class="choice" id="paper">
+            <img src="./images/paper.png" alt="Paper hand gesture">
+        </div>
+        <div class="choice" id="scissors">
+            <img src="./images/scissors.png" alt="Scissors hand gesture">
+        </div>
+    </div>
+    
+    <div class="score-board">
+        <div class="sore">
+            <p id="user-score"> 0 </p>
+            <p> Your Points </p>
+        </div>
+        <div class="score">
+            <p id="dev-score"> 0 </p>
+            <p> Developer Points </p>
+        </div>
+    </div>
+
+    <div class="msg-cointainer">
+        <p id="msg"> Can you WIN!</p>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
