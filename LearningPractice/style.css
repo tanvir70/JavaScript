@@ -1,0 +1,36 @@
+div{
+height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    background-color: yellow;
+}
+
+.p1{
+    height: 100px;
+    width: 150px;
+    border: 10px solid rgb(183, 239, 243);
+    margin: 5px;
+    text-align: center;
+    background-color: rgb(235, 211, 167);
+}
+
+.p2{
+    height: 200px;
+    width: 450px;
+    margin: 5px;
+    text-align: left;
+    background-color: rgb(247, 6, 6);
+
+}
+
+.dark{
+    background-color: black;
+    color: white;
+}
+
+.light{
+    background-color: white;
+    color: black;
+}
