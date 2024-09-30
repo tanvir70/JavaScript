@@ -1,29 +1,51 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F0F4F8;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    background-color: #FBFBFB;
 }
 
 h1 {
-    background-color:#46656F;
+    background-color: #46656F;
     color: #D8DFE5;
-    height: 5rem;
-    line-height: 5rem;
+    padding: 1rem;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 3rem;
 }
 
 .choice {
     height: 165px;
     width: 165px;
     display: flex;
-    border-radius: 50%;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .choice:hover {
     cursor: pointer;
     background-color: #46656F;
+    transform: scale(1.05);
 }
 
 img {
@@ -31,39 +53,65 @@ img {
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
-    
-}
-
-.choices {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 6rem;
-    gap : 3rem;
 }
 
 .score-board {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    gap: 2.5rem;
-    margin-top: 6rem;
+    font-size: 1.8rem;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #user-score, #dev-score {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    color: #333;
 }
 
 .msg-container {
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 #msg {
     background-color: #46656F;
     color: #FBFBFB;
     font-size: 2rem;
-    display: inline;
-    padding: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
     border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+#round-info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #081b31;
+}
+
+.reset-container {
+    margin-top: 2.5rem;
+}
+
+#reset-btn {
+    padding: 0.75rem 3rem;
+    background-color: #081b31;
+    color: #FBFBFB;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#reset-btn:hover {
+    background-color: #46656F;
+    transform: scale(1.05);
 }
