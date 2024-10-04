@@ -93,3 +93,7 @@ const resetGame = () => {
 resetBtn.addEventListener("click", resetGame);
 
 updateRoundInfo();
+
+
+let arr = [1, 2, 3];
+console.log(arr.toString());  // Output: "1,2,3"
