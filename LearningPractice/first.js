@@ -242,19 +242,65 @@
 // paraTag.classList.add("p2");
 
 
-let button = document.querySelector("button");
-let mode = "light";
-let body = document.querySelector("body");
+// let button = document.querySelector("button");
+// let mode = "light";
+// let body = document.querySelector("body");
 
-button.addEventListener("click", () => {
-      if (mode === "light"){
-            mode = "dark"; 
-            body.setAttribute("class","dark")
-      }else{
-            mode = "light";
-            body.setAttribute("class","light")
-      }
-});
+// button.addEventListener("click", () => {
+//       if (mode === "light"){
+//             mode = "dark"; 
+//             body.setAttribute("class","dark")
+//       }else{
+//             mode = "light";
+//             body.setAttribute("class","light")
+//       }
+// });
 
 
+// class User {
+//       constructor(name,email){
+//             this.name = name;
+//             this.email = email;
+//       }
+//       viewData(){
+//             console.log("veiwing data");
+//       }
+// }
+
+// let stu1 = new User("rifat", "email@email.com");
+// let stu2 = new User("Tanvir", "email.com");
+
+// let tech = new User("dean","email@com");
+
+// class Admin extends User{
+//       constructor(name,email){
+//             super();
+//       }
+//       editData(){
+//             console.log("edit");
+//       }
+// }
+
+function asyncFunc1() {
+      return new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                  console.log("I am inside time out on ASYNC 01. waited for 5000 ms");
+                  resolve("Resolving Promise");
+            }, 4000);
+      });
+}
+
+function asyncFunc2() {
+      return new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                  console.log("I am inside time out on ASYNC 02. waited for 3000 ms");
+                  reject("Rejecting Promise");
+            }, 4000);
+      });
+}
+
+
+asyncFunc1().then((res) => {
+      asyncFunc2().catch(res);
+})
 
