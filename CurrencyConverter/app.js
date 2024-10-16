@@ -35,31 +35,19 @@ const updateExchangeRate = async () => {
   }
 
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}.json`;
+
+  let response = await fetch(URL);
+  let data = await response.json();
   
- 
-    let response = await fetch(URL);
-
-    let data = await response.json();
-    console.log("API Response:",JSON.stringify(data) );
-    
-    let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
-
-    console.log("Tocurr value :" ,toCurr.value.toLowerCase())
-
-    console.log("From Currency:", fromCurr.value);
-    console.log("To Currency:", toCurr.value);
-    console.log("Rate:", data[toCurr.value.toLowerCase()]);
-    console.log(rate);
-
-    
-    if (!rate) {
-      msg.innerText = `Unable to find the exchange rate from ${fromCurr.value} to ${toCurr.value}`;
-      return;
-    }
-
-    let finalAmount = amtVal * rate;
-    msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount.toFixed(2)} ${toCurr.value}`;
+  let rate = data[fromCurr.value.toLowerCase()][toCurr.value.toLowerCase()];
   
+  if (!rate) {
+    msg.innerText = `Unable to find the exchange rate from ${fromCurr.value} to ${toCurr.value}`;
+    return;
+  }
+
+  let finalAmount = amtVal * rate;
+  msg.innerText = `${amtVal} ${fromCurr.value} = ${finalAmount.toFixed(2)} ${toCurr.value}`;
 };
 
 const updateFlag = (element) => {
