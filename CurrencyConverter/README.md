@@ -28,7 +28,9 @@ You'll need a web browser like Google Chrome or Mozilla Firefox etc.
 2. Select the currency you want to convert **from**.
 3. Select the currency you want to convert **to**.
 4. Click the "Convert" button to see the converted value.
-![The conveter web view](/home/tanvir/Pictures/Screenshots/CurrencyConverter.png)
+   
+![CurrencyConverter](https://github.com/user-attachments/assets/46c9626a-fdfd-458d-bee3-1735b7ecdbfb)
+
 ## Contributing
 
 You can submit issues or pull requests if you'd like to add something to the project.
